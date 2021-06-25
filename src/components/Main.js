@@ -10,12 +10,13 @@ class Main extends React.Component {
             <div>
                 {/* Sending the props to HornedBeasts */}
 
-                {HornsData.map(elemnet => {
+                {HornsData.map((elemnet,index) => {
                     return(
                         <HornedBeasts //This's the call back function
                         title={elemnet.title}
                         imageUrl={elemnet.image_url}
                         description={elemnet.description}
+                        key={index}
                         />
                     )
                 })}
