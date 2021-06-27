@@ -16,6 +16,7 @@ class HornedBeasts extends React.Component{
         this.setState({
             favorites:this.state.favorites+1
         })
+        this.props.displayAsModal(this.props.title);
     }
 
     render(){
