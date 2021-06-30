@@ -42,13 +42,18 @@ class App extends React.Component {
     );
   }
 
+  updateAllBeasts = (DataArray) => {
+    this.setState({ DataArray });
+  }
+
   render() {
     return (
       <div>
         <Header />
         {/* (3)Send a function into your Main component that allows the user to update state in the App */}
         <Main DataArray={this.state.DataArray}
-          DisplayModalFun={this.DisplayModalFun} />
+          DisplayModalFun={this.DisplayModalFun} 
+          displayFilteredImages={this.updateAllBeasts}/>
         <SelectedBeast
           selectedBeast={this.state.selectedBeast}
           show={this.state.ModalDisplay}
