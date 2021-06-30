@@ -9,8 +9,10 @@ class SelectedBeast extends React.Component {
 
     render() {
         return (
-            <Modal show={this.props.show} onHide={this.props.handleClose}>
-                <Modal.Dialog>
+
+          //(5)Use the state in the App to render an individual beast in a Modal in the SelectedBeast component using React Boothstrap
+            <Modal show={this.props.show} onHide={this.props.CloseFun}>
+              
                 <Modal.Header closeButton>
                     <Modal.Title>{this.props.selectedBeast.title}</Modal.Title>
                 </Modal.Header>
@@ -35,7 +37,7 @@ class SelectedBeast extends React.Component {
                         Close
                     </Button>
                 </Modal.Footer>
-                </Modal.Dialog>
+               
             </Modal>
         )
     }

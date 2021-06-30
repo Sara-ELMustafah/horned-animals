@@ -3,20 +3,21 @@ import HornedBeasts from './HornedBeasts';
 
 
 class Main extends React.Component {
-    
+
     render() {
         return (
-            <div>
+            <div style={{ display: 'flex', flexFlow: 'row', flexWrap: 'wrap', padding: '4rem' }}>
                 {/* Sending the props to HornedBeasts */}
 
-                {this.props.DataArray.map((elemnet,index) => {
-                    return(
+                {/* (2) Map over the JSON data in your Main component to render each beast */}
+                {this.props.DataArray.map((elemnet, index) => {
+                    return (
                         <HornedBeasts //This's the call back function
-                        title={elemnet.title}
-                        imageUrl={elemnet.image_url}
-                        description={elemnet.description}
-                        key={index}
-                        displayAsModal={this.props.displayAsModal}
+                            title={elemnet.title}
+                            imageUrl={elemnet.image_url}
+                            description={elemnet.description}
+                            key={index}
+                            DisplayModalFun={this.props.DisplayModalFun}
                         />
                     )
                 })}

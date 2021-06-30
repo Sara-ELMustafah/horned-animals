@@ -8,15 +8,15 @@ class HornedBeasts extends React.Component{
     constructor(props){
         super(props);
         this.state={
-           favorites:0
+           Fav:0
         }
     }
 
     increaseNumOfFav=() => {
         this.setState({
-            favorites:this.state.favorites+1
+            Fav:this.state.Fav+1
         })
-        this.props.displayAsModal(this.props.title);
+        this.props.DisplayModalFun(this.props.title);
     }
 
     render(){
@@ -34,7 +34,7 @@ class HornedBeasts extends React.Component{
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>
                              {this.props.description} <br/>
-                        😸 : {this.state.favorites}
+                        😸 : {this.state.Fav}
                         </Card.Text>
                         <Button variant="primary">Fav</Button>
                     </Card.Body>
