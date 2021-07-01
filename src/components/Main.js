@@ -7,11 +7,11 @@ import HornsData from './HornsData.json';
 
 class Main extends React.Component {
 
-    filter = (e) => {
-        const numHorns = parseInt(e.target.value);
+    filter = (element) => {
+        let numHorns = parseInt(element.target.value);
         let gallery = HornsData;
         if (numHorns) {
-          gallery = HornsData.filter((creature) => creature.horns === numHorns);
+          gallery = HornsData.filter((element) => element.horns === numHorns);
         }
         this.props.displayFilteredImages(gallery);
       };
@@ -27,7 +27,7 @@ class Main extends React.Component {
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
-              <option value="100">Wow...</option>
+              <option value="100">Wow</option>
             </Form.Control>
           </Form.Group>
         </Form>
